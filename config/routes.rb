@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
-  #NOTE: for whatever reason, absolute paths are not working here (as the instructions tell me to do), but relative ones are fine.  WTF?!?!
+  #NOTE: for whatever reason, absolute paths are not working here (as the instructions tell me to do), but relative ones are fine.
   get "api/v1/tasks", to: "api/v1/tasks#index"
   get "api/v1/tasks/:id", to: "api/v1/tasks#show"
   post "api/v1/tasks", to: "api/v1/tasks#create"
@@ -14,6 +14,3 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 end
-
-# Rails.application.routes.draw do
-# end
